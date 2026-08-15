@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js" defer></script>
+    <title>Currency Converter 💱</title>
+  </head>
+  <body>
+    <main class="app-wrapper">
+      <section class="converter-card">
+        <div class="top-actions">
+          <button
+            type="button"
+            class="theme-btn"
+            id="themeBtn"
+            aria-label="Toggle theme"
+          >
+            <i data-lucide="moon"></i>
+          </button>
+        </div>
+
+        <header class="converter-header">
+          <div class="header-icon">
+            <i data-lucide="badge-dollar-sign"></i>
+          </div>
+
+          <h1>Currency Converter</h1>
+
+          <p>Convert currencies quickly with a clean and simple interface.</p>
+        </header>
+
+        <section class="converter-section">
+          <label for="amountInput">Amount</label>
+
+          <div class="amount-input-wrapper">
+            <span class="amount-symbol" id="amountSymbol">€</span>
+
+            <input
+              type="number"
+              id="amountInput"
+              placeholder="0.00"
+              min="0"
+              step="0.01"
+              autocomplete="off"
+            />
+          </div>
+        </section>
+
+        <section class="currency-selector-section">
+          <div class="currency-box">
+            <span class="currency-label">From</span>
+
+            <div class="currency-select-wrapper">
+              <div class="currency-flag" id="fromFlag">🇪🇺</div>
+
+              <select id="fromCurrency">
+                <option value="EUR">EUR - Euro</option>
+                <option value="USD">USD - US Dollar</option>
+                <option value="GBP">GBP - British Pound</option>
+                <option value="CHF">CHF - Swiss Franc</option>
+                <option value="CZK">CZK - Czech Koruna</option>
+                <option value="PLN">PLN - Polish Zloty</option>
+              </select>
+
+              <i data-lucide="chevron-down"></i>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            class="swap-btn"
+            id="swapBtn"
+            aria-label="Swap currencies"
+          >
+            <i data-lucide="arrow-down-up"></i>
+          </button>
+
+          <div class="currency-bx">
+            <span class="currency-label">To</span>
+
+            <div class="currency-select-wrapper">
+              <div class="currency-flag" id="toFlag">🇺🇸</div>
+
+              <select id="toCurrency">
+                <option value="USD">USD - US Dollar</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="GBP">GBP - British Pound</option>
+                <option value="CHF">CHF - Swiss Franc</option>
+                <option value="CZK">CZK - Czech Koruna</option>
+                <option value="PLN">PLN - Polish Zloty</option>
+              </select>
+
+              <i data-lucide="chevron-down"></i>
+            </div>
+          </div>
+        </section>
+
+        <section class="result-section">
+          <div class="result-top">
+            <span>Converted Amount</span>
+
+            <div class="live-badge">
+              <span></span>
+              Live Rate
+            </div>
+          </div>
+
+          <div class="result-value">
+            <span id="fromAmountText">0.00 EUR</span>
+
+            <i data-lucide="arrow-right"></i>
+
+            <strong id="convertedAmount">0.00 USD</strong>
+          </div>
+
+          <div class="exchange-rate-box">
+            <i data-lucide="refresh-cw"></i>
+
+            <span id="exchangeRateText"> 1 EUR = 0.00 USD </span>
+          </div>
+        </section>
+
+        <button type="button" class="convert-btn" id="convertBtn">
+          <i data-lucide="repeat-2"></i>
+          <span>Convert Currency</span>
+        </button>
+
+        <button type="button" class="reset-btn" id="resetBtn">
+          <i data-lucide="rotate-ccw"></i>
+          <span>Reset</span>
+        </button>
+      </section>
+
+      <section class="features-bar">
+        <div class="feature-item">
+          <div class="feature-icon purple">
+            <i data-lucide="zap"></i>
+          </div>
+
+          <div>
+            <strong>Fast</strong>
+            <span>Instant conversion</span>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon green">
+            <i data-lucide="shield-check"></i>
+          </div>
+
+          <div>
+            <strong>Reliable</strong>
+            <span>Clear exchange data</span>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon blue">
+            <i data-lucide="refresh-cw"></i>
+          </div>
+
+          <div>
+            <strong>Live Rates</strong>
+            <span>Fresh conversions</span>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon orange">
+            <i data-lucide="sun-moon"></i>
+          </div>
+
+          <div>
+            <strong>Light & Dark</strong>
+            <span>Switch anytime</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
