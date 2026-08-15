@@ -6,7 +6,7 @@ Currency Converter PRO allows users to convert between multiple currencies using
 
 ## 🚀 Live Demo
 
-🌐 **[Launch Currency Converter PRO]()**
+🌐 **[Launch Currency Converter PRO](https://johnyisbackk.github.io/js-currency-converter/)**
 
 ## 📸 Preview
 
